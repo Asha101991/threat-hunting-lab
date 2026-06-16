@@ -1,0 +1,6 @@
+type,value,description
+ip,185.220.101.1,Suspicious Tor exit node example
+domain,malicious-example.com,Example malicious domain
+hash,d41d8cd98f00b204e9800998ecf8427e,Example file hash
+filename,invoice_payload.exe,Example suspicious executable
+process,powershell.exe,PowerShell execution monitoring
