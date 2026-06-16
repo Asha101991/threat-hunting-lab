@@ -1,0 +1,20 @@
+title: Potential Ransomware File Activity
+id: 5d5033af-ransomware-threat-hunting-lab
+status: experimental
+description: Detects suspicious file modifications commonly associated with ransomware activity.
+author: Ashaar Leacock-Thomas
+logsource:
+  product: windows
+  category: file_event
+detection:
+  extensions:
+    TargetFilename|endswith:
+      - '.locked'
+      - '.encrypted'
+      - '.crypt'
+      - '.pay'
+  condition: extensions
+level: critical
+tags:
+  - attack.impact
+  - attack.t1486

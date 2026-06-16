@@ -1,0 +1,22 @@
+title: Suspicious PowerShell Execution
+id: 7b1f7a44-6f48-4d21-bb62-threat-hunting-lab
+status: experimental
+description: Detects suspicious PowerShell command line usage.
+author: Ashaar Leacock-Thomas
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image|endswith: '\powershell.exe'
+    CommandLine|contains:
+      - 'EncodedCommand'
+      - '-enc'
+      - 'Bypass'
+      - 'DownloadString'
+      - 'IEX'
+  condition: selection
+level: high
+tags:
+  - attack.execution
+  - attack.t1059.001
