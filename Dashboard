@@ -1,0 +1,12 @@
+# Threat Hunting Dashboard Ideas
+
+Suggested Splunk dashboard panels:
+
+1. Failed logons by source IP
+2. Encoded PowerShell executions
+3. Suspicious parent-child processes
+4. New admin group membership changes
+5. Lateral movement indicators
+6. Top suspicious command lines
+7. IOC matches
+8. Ransomware-like file activity spikes
